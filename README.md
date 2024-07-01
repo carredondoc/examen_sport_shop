@@ -1,0 +1,1 @@
+# examen_spot_shop
