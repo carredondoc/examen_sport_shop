@@ -11,9 +11,8 @@ body {
   background-color: black;
 }
 
-a{
-
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 a:link {
   color: white;
@@ -39,6 +38,7 @@ a:active {
   grid-template-areas:
     "nav"
     "main"
+    "tarjetasMovil"
     "footer";
 }
 
@@ -63,6 +63,8 @@ nav {
   max-height: 40px;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 100;
 }
 
 .logo {
@@ -123,6 +125,53 @@ main h3 {
 .fotos:hover {
   transform: scale(1.2);
   filter: grayscale(0%) brightness(70%);
+}
+
+.tarjetasMovil{
+
+  grid-area: tarjetasMovil;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedorTarjetaMovil{
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+ text-align: center;
+  margin-bottom: 50px;
+
+
+}
+
+.tarjetaMovil{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: solid rgb(151, 151, 151) 5px;
+  max-width: 250px;
+  height: 300px;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+
+  background-color: white;
+
+
+}
+
+.tarjetasMovil img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contenedorFotosMobile p {
@@ -196,6 +245,11 @@ hr {
     display: none;
   }
 
+  .contenedorTarjetaMovil{
+
+    display: none;
+  }
+
   .container {
     display: grid;
     background-image: url(./images/fondo_deportes.jpg);
@@ -231,11 +285,8 @@ hr {
     align-items: center;
   }
 
-  .navDesktop a{
-
-      text-align: center;
-
-
+  .navDesktop a {
+    text-align: center;
   }
 
   .logo {
@@ -260,7 +311,6 @@ hr {
     line-height: 50px;
     margin-top: 25px;
     font-size: 15px;
-    
 
     list-style-type: none;
     font-weight: 200;
@@ -296,7 +346,6 @@ hr {
     text-align: left;
     position: relative;
     cursor: pointer;
-    
   }
 
   .contenedorFotosDesktop img {
@@ -345,8 +394,6 @@ hr {
     color: white;
     align-items: center;
     padding-top: 30px;
-
-    
   }
 
   .tarjetas {
@@ -356,7 +403,7 @@ hr {
     padding-bottom: 50px;
     flex-wrap: wrap;
     justify-content: center;
-   gap: 70px;
+    gap: 70px;
   }
 
   .card {
@@ -382,13 +429,11 @@ hr {
     transition: transform 0.5s;
   }
 
-  .card img:hover{
+  .card img:hover {
     transform: scale(1.05);
-
   }
 
-  .card p{
-
+  .card p {
     z-index: 50;
   }
 
@@ -396,7 +441,7 @@ hr {
     display: none;
   }
 
-  .final{
+  .final {
     display: grid;
     height: auto;
     max-width: 1400px;
@@ -419,7 +464,6 @@ hr {
     padding-left: 20px;
     padding-right: 20px;
     border-top: 2px solid white;
-  
   }
   .contacto {
     text-align: left;
