@@ -30,11 +30,11 @@ a:active {
 .container {
   display: grid;
   height: auto;
-  max-width: 580px;
+  max-width: 730px;
   margin: auto;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.13fr 1fr 0.3fr;
+  grid-template-rows: 1fr 1fr 0.3fr;
   grid-template-areas:
     "nav"
     "main"
@@ -60,23 +60,52 @@ nav {
   background-color: rgb(37, 37, 37);
   color: white;
   display: flex;
-  height: 70px;
-  justify-content: space-between;
+  height: 65px;
   align-items: center;
-  position: fixed;
+
+  width: 100vw;
+  justify-content: space-between;
   z-index: 100;
+  position: fixed;
+}
+
+.contenedorLogo {
+  display: flex;
+  width: 150px;
 }
 
 .logo {
-  width: 20%;
-  margin-left: 50px;
+  width: 100px;
+}
+
+.menuHamburguesa {
+  display: flex;
+  width: 130px;
+  padding-left: 25px;
 }
 
 .fa-bars {
-  padding-left: 25px;
+  cursor: pointer;
 }
-.iconos {
-  padding-right: 10px;
+
+.fa-magnifying-glass {
+  cursor: pointer;
+}
+
+.fa-cart-shopping {
+  cursor: pointer;
+}
+.fa-heart {
+  cursor: pointer;
+}
+
+.iconosMovil {
+  display: flex;
+  justify-content: end;
+  padding-right: 25px;
+  justify-content: space-around;
+
+  width: 130px;
 }
 .iconos i {
   margin-right: 10px;
@@ -94,6 +123,10 @@ main {
 
 main h3 {
   font-size: 20px;
+  color: white;
+  font-size: 25px;
+  padding-top: 75px;
+  font-weight: 400;
 }
 
 .contenedorMainMobile {
@@ -127,26 +160,22 @@ main h3 {
   filter: grayscale(0%) brightness(70%);
 }
 
-.tarjetasMovil{
-
+.tarjetasMovil {
   grid-area: tarjetasMovil;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.contenedorTarjetaMovil{
-
+.contenedorTarjetaMovil {
   display: flex;
   flex-direction: column;
   color: white;
- text-align: center;
+  text-align: center;
   margin-bottom: 50px;
-
-
 }
 
-.tarjetaMovil{
+.tarjetaMovil {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
@@ -163,15 +192,21 @@ main h3 {
   margin-top: 25px;
 
   background-color: white;
-
-
 }
 
-.tarjetasMovil img{
-
+.tarjetasMovil img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
+}
+
+.tarjetasMovil img:hover {
+  transform: scale(1.1);
+}
+
+.tarjetaMovil p {
+  z-index: 50;
 }
 
 .contenedorFotosMobile p {
@@ -217,7 +252,7 @@ main h3 {
 
 .redesSociales {
   display: flex;
-  width: 25%;
+  width: 200px;
   justify-content: space-between;
   font-size: 25px;
 }
@@ -236,7 +271,7 @@ hr {
 .footerDesktop {
   display: none;
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 730px) {
   .navMovil {
     display: none;
   }
@@ -245,8 +280,7 @@ hr {
     display: none;
   }
 
-  .contenedorTarjetaMovil{
-
+  .contenedorTarjetaMovil {
     display: none;
   }
 
@@ -465,6 +499,11 @@ hr {
     padding-right: 20px;
     border-top: 2px solid white;
   }
+
+  .logotipoFooter {
+    min-width: 50px;
+  }
+
   .contacto {
     text-align: left;
     padding-left: 25px;
